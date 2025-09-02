@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AK Blogs</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #fffbe6 0%, #ffe066 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(90deg, #ffd700 60%, #e6b800 100%);
+            padding: 40px 0 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(230, 184, 0, 0.15);
+        }
+        h1 {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 3.5rem;
+            color: #b8860b;
+            text-shadow: 2px 2px 8px #fff8dc, 0 2px 4px #e6b800;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fffde7;
+            border-radius: 18px;
+            box-shadow: 0 2px 16px rgba(255, 215, 0, 0.13);
+            padding: 32px 28px;
+        }
+        h2 {
+            color: #e6b800;
+            font-size: 2rem;
+            margin-bottom: 12px;
+            font-family: 'Segoe Script', cursive;
+            text-shadow: 1px 1px 6px #fff8dc;
+        }
+        p {
+            color: #6d4c00;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+        /* Decorative accents */
+        .accent {
+            width: 60px;
+            height: 6px;
+            background: linear-gradient(90deg, #ffe066 0%, #ffd700 100%);
+            border-radius: 3px;
+            margin: 0 auto 24px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AK Blogs</h1>
+    </header>
+    <div class="container">
+        <div class="accent"></div>
+        <h2>Introduction</h2>
+        <p>
+            Hello! I'm a Computer Science and Engineering (CSE) student passionate about technology, creativity, and sharing knowledge. Welcome to AK Blogs, where I write about my journey, experiences, and insights in the world of computing. Dive in to explore articles, tutorials, and stories crafted with enthusiasm and a touch of yellow!
+        </p>
+    </div>
+</body>
+</html>
