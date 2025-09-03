@@ -12,41 +12,57 @@
             position: relative;
             overflow-x: hidden;
         }
-        /* Background yellow objects */
-        .bg-circle {
+        /* Glassy background objects */
+        .bg-object {
             position: absolute;
-            border-radius: 50%;
-            opacity: 0.25;
             z-index: 0;
+            opacity: 0.35;
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            box-shadow: 0 4px 24px 0 rgba(255, 215, 0, 0.12);
+            border: 1.5px solid rgba(255, 215, 0, 0.18);
         }
-        .circle1 {
-            width: 180px;
-            height: 180px;
-            background: #ffe066;
-            top: 40px;
-            left: -60px;
+        /* Circles */
+        .circle1 { width: 180px; height: 180px; background: rgba(255, 224, 102, 0.7); border-radius: 50%; top: 40px; left: -60px; }
+        .circle2 { width: 120px; height: 120px; background: rgba(255, 215, 0, 0.7); border-radius: 50%; top: 320px; right: -40px; }
+        .circle3 { width: 90px; height: 90px; background: rgba(255, 241, 118, 0.7); border-radius: 50%; bottom: 60px; left: 60px; }
+        .circle4 { width: 60px; height: 60px; background: rgba(255, 236, 128, 0.7); border-radius: 50%; bottom: 120px; right: 80px; }
+        .circle5 { width: 70px; height: 70px; background: rgba(255, 223, 70, 0.7); border-radius: 50%; top: 180px; left: 120px; }
+        /* Triangles */
+        .triangle1, .triangle2, .triangle3 {
+            width: 0; height: 0; border-style: solid; position: absolute;
         }
-        .circle2 {
-            width: 120px;
-            height: 120px;
-            background: #ffd700;
-            top: 320px;
-            right: -40px;
+        .triangle1 {
+            border-width: 0 40px 70px 40px;
+            border-color: transparent transparent rgba(255, 215, 0, 0.6) transparent;
+            top: 80px; right: 120px;
+            transform: rotate(-10deg);
         }
-        .circle3 {
-            width: 90px;
-            height: 90px;
-            background: #fff176;
-            bottom: 60px;
-            left: 60px;
+        .triangle2 {
+            border-width: 0 30px 50px 30px;
+            border-color: transparent transparent rgba(255, 224, 102, 0.6) transparent;
+            bottom: 160px; left: 220px;
+            transform: rotate(15deg);
         }
-        .circle4 {
-            width: 60px;
-            height: 60px;
-            background: #ffec80;
-            bottom: 120px;
-            right: 80px;
+        .triangle3 {
+            border-width: 0 25px 40px 25px;
+            border-color: transparent transparent rgba(255, 236, 128, 0.6) transparent;
+            top: 340px; left: 40px;
+            transform: rotate(-25deg);
         }
+        /* Hexagons */
+        .hexagon1, .hexagon2, .hexagon3 {
+            width: 60px; height: 34px;
+            background: rgba(255, 215, 0, 0.6);
+            position: absolute;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border: 1.5px solid rgba(255, 215, 0, 0.18);
+        }
+        .hexagon1 { top: 220px; left: 480px; background: rgba(255, 224, 102, 0.6); }
+        .hexagon2 { bottom: 80px; right: 180px; background: rgba(255, 236, 128, 0.6); }
+        .hexagon3 { top: 120px; right: 40px; background: rgba(255, 241, 118, 0.6); }
         header {
             background: linear-gradient(90deg, #ffd700 60%, #e6b800 100%);
             padding: 40px 0 20px 0;
@@ -97,11 +113,18 @@
     </style>
 </head>
 <body>
-    <!-- Yellow background objects -->
-    <div class="bg-circle circle1"></div>
-    <div class="bg-circle circle2"></div>
-    <div class="bg-circle circle3"></div>
-    <div class="bg-circle circle4"></div>
+    <!-- Glassy yellow background objects -->
+    <div class="bg-object circle1"></div>
+    <div class="bg-object circle2"></div>
+    <div class="bg-object circle3"></div>
+    <div class="bg-object circle4"></div>
+    <div class="bg-object circle5"></div>
+    <div class="bg-object triangle1"></div>
+    <div class="bg-object triangle2"></div>
+    <div class="bg-object triangle3"></div>
+    <div class="bg-object hexagon1"></div>
+    <div class="bg-object hexagon2"></div>
+    <div class="bg-object hexagon3"></div>
 
     <header>
         <h1>AK Blogs</h1>
