@@ -9,12 +9,51 @@
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
+            position: relative;
+            overflow-x: hidden;
+        }
+        /* Background yellow objects */
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.25;
+            z-index: 0;
+        }
+        .circle1 {
+            width: 180px;
+            height: 180px;
+            background: #ffe066;
+            top: 40px;
+            left: -60px;
+        }
+        .circle2 {
+            width: 120px;
+            height: 120px;
+            background: #ffd700;
+            top: 320px;
+            right: -40px;
+        }
+        .circle3 {
+            width: 90px;
+            height: 90px;
+            background: #fff176;
+            bottom: 60px;
+            left: 60px;
+        }
+        .circle4 {
+            width: 60px;
+            height: 60px;
+            background: #ffec80;
+            bottom: 120px;
+            right: 80px;
         }
         header {
             background: linear-gradient(90deg, #ffd700 60%, #e6b800 100%);
             padding: 40px 0 20px 0;
             text-align: center;
             box-shadow: 0 4px 12px rgba(230, 184, 0, 0.15);
+            position: relative;
+            z-index: 1;
         }
         h1 {
             font-family: 'Brush Script MT', cursive;
@@ -31,6 +70,8 @@
             border-radius: 18px;
             box-shadow: 0 2px 16px rgba(255, 215, 0, 0.13);
             padding: 32px 28px;
+            position: relative;
+            z-index: 1;
         }
         h2 {
             color: #e6b800;
@@ -56,6 +97,12 @@
     </style>
 </head>
 <body>
+    <!-- Yellow background objects -->
+    <div class="bg-circle circle1"></div>
+    <div class="bg-circle circle2"></div>
+    <div class="bg-circle circle3"></div>
+    <div class="bg-circle circle4"></div>
+
     <header>
         <h1>AK Blogs</h1>
     </header>
