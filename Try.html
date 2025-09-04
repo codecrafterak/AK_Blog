@@ -1,255 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="description" content="AK Blogs - Personal blog by a CSE student. Insights, tutorials, and stories on coding, automation, and technology.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="blog, coding, CSE, automation, technology, AK Blogs">
+    <meta name="author" content="Ajay">
     <meta charset="UTF-8">
     <title>AK Blogs</title>
-    <nav class="navbar">
-  <ul>
-    <li><a href="#intro">Introduction</a></li>
-    <li><a href="#aim-section">Aim</a></li>
-    <!-- Add more links as needed -->
-  </ul>
-</nav>
-    <style>
-        @media (max-width: 768px) {
-  .logo-wrap {
-    flex-direction: column;
-  }
-  .container, .aim-container {
-    padding: 20px;
-    margin: 20px;
-  }
-}
-        body {
-            background: linear-gradient(135deg, #fffbe6 0%, #ffe066 100%);
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            overflow-x: hidden;
-        }
-    /* 3D Glassy background objects */
-        .bg-object {
-            position: absolute;
-            z-index: 0;
-            opacity: 0.7;
-            backdrop-filter: blur(8px) brightness(1.1);
-            -webkit-backdrop-filter: blur(8px) brightness(1.1);
-            box-shadow:
-                0 8px 32px 0 rgba(255, 215, 0, 0.22), /* main shadow */
-                0 1.5px 0 0 rgba(255,255,255,0.18) inset, /* highlight */
-                0 0 24px 0 rgba(255,255,255,0.10) inset; /* inner glow */
-            border: 2px solid rgba(255, 215, 0, 0.22);
-            transition: transform 0.7s cubic-bezier(.4,2,.3,1), box-shadow 0.7s, top 0.7s, left 0.7s, right 0.7s, bottom 0.7s;
-        }
-        /* 3D effect for circles */
-        .bg-object[class*="circle"] {
-            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.45) 0%, rgba(255,224,102,0.7) 60%, rgba(255,215,0,0.7) 100%);
-        }
-        /* 3D effect for triangles */
-        .bg-object[class*="triangle"] {
-            filter: drop-shadow(0 8px 24px rgba(255,215,0,0.18));
-        }
-        /* 3D effect for hexagons */
-        .bg-object[class*="hexagon"] {
-            background: linear-gradient(135deg, rgba(255,255,255,0.35) 10%, rgba(255,224,102,0.7) 60%, rgba(255,215,0,0.7) 100%);
-            box-shadow:
-                0 8px 32px 0 rgba(255, 215, 0, 0.22),
-                0 1.5px 0 0 rgba(255,255,255,0.18) inset,
-                0 0 24px 0 rgba(255,255,255,0.10) inset;
-        }
-        /* Circles */
-        .circle1 { width: 180px; height: 180px; background: rgba(255, 224, 102, 0.7); border-radius: 50%; top: 40px; left: -60px; }
-        .circle2 { width: 120px; height: 120px; background: rgba(255, 215, 0, 0.7); border-radius: 50%; top: 320px; right: -40px; }
-        .circle3 { width: 90px; height: 90px; background: rgba(255, 241, 118, 0.7); border-radius: 50%; bottom: 60px; left: 60px; }
-        .circle4 { width: 60px; height: 60px; background: rgba(255, 236, 128, 0.7); border-radius: 50%; bottom: 120px; right: 80px; }
-        .circle5 { width: 70px; height: 70px; background: rgba(255, 223, 70, 0.7); border-radius: 50%; top: 180px; left: 120px; }
-        /* Triangles */
-        .triangle1, .triangle2, .triangle3 {
-            width: 0; height: 0; border-style: solid; position: absolute;
-        }
-        .triangle1 {
-            border-width: 0 40px 70px 40px;
-            border-color: transparent transparent rgba(255, 215, 0, 0.6) transparent;
-            top: 80px; right: 120px;
-            transform: rotate(-10deg);
-        }
-        .triangle2 {
-            border-width: 0 30px 50px 30px;
-            border-color: transparent transparent rgba(255, 224, 102, 0.6) transparent;
-            bottom: 160px; left: 220px;
-            transform: rotate(15deg);
-        }
-        .triangle3 {
-            border-width: 0 25px 40px 25px;
-            border-color: transparent transparent rgba(255, 236, 128, 0.6) transparent;
-            top: 340px; left: 40px;
-            transform: rotate(-25deg);
-        }
-        /* Hexagons */
-        .hexagon1, .hexagon2, .hexagon3 {
-            width: 60px; height: 34px;
-            background: rgba(255, 215, 0, 0.6);
-            position: absolute;
-            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-            border: 1.5px solid rgba(255, 215, 0, 0.18);
-        }
-        .hexagon1 { top: 220px; left: 480px; background: rgba(255, 224, 102, 0.6); }
-        .hexagon2 { bottom: 80px; right: 180px; background: rgba(255, 236, 128, 0.6); }
-        .hexagon3 { top: 120px; right: 40px; background: rgba(255, 241, 118, 0.6); }
+    <!-- Navigation moved to body for semantic structure -->
+    <link rel="stylesheet" href="style.css">
+    <nav class="navbar" aria-label="Main Navigation" role="navigation">
+            <ul>
+                <li><a href="#intro" class="nav-link active">Introduction</a></li>
+                <li><a href="#aim-section" class="nav-link">Aim</a></li>
+                <li><a href="#blog-posts" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="loading-overlay">
+            <div class="loader"></div>
+        </div>
+    <section id="blog-posts">
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="A laptop and coffee cup on a desk, representing coding and blogging" class="blog-thumb">
+                <div class="blog-content">
+                    <h3 class="blog-title">How I Started Coding</h3>
+                    <p class="blog-desc">A brief story about my journey into programming, the challenges, and the excitement of building my first project.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </section>
+        <style>
 
-        /* Enlarged state for transition */
-        .bg-object.enlarged {
-            transform: scale(1.35);
-            box-shadow: 0 8px 48px 0 rgba(255, 215, 0, 0.22);
+                <input type="email" id="email" name="email" required style="width:100%;padding:8px;margin-bottom:12px;border-radius:6px;border:1px solid #ffe066;">
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" required style="width:100%;padding:8px;margin-bottom:18px;border-radius:6px;border:1px solid #ffe066;"></textarea>
+                <button type="submit" style="background:linear-gradient(90deg,#ffe066 0%,#ffd700 100%);color:#6d4c00;padding:10px 24px;border:none;border-radius:6px;font-weight:bold;">Send</button>
+                    <input type="email" id="email" name="email" required>
+            <div id="form-message" style="color:#e6b800;margin-top:16px;"></div>
+                    <textarea id="message" name="message" required></textarea>
+        <div style="max-width:700px;margin:40px auto;">
+                    <button type="submit">Send</button>
+        </div>
+                <div id="form-message"></div>
+        .hidden-section {
+            <div class="search-bar-container">
+            transform: translateY(40px);
+                <input type="text" id="search-bar" placeholder="Search blog posts...">
         }
+    
 
-        header {
-            background: linear-gradient(90deg, #ffd700 60%, #e6b800 100%);
-            padding: 60px 0 60px 0;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(230, 184, 0, 0.15);
-            position: relative;
-            z-index: 1;
-            overflow: visible;
-        }
-        .futuristic-bg {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 100vw;
-            height: 180px;
-            pointer-events: none;
-            z-index: 0;
-        }
-        .logo-wrap {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 18px;
-            margin-top: 0;
-        }
-        .logo-icon {
-            width: 108px;
-            height: 108px;
-            border-radius: 32px;
-            background: linear-gradient(135deg, #fffbe6 60%, #ffe066 100%);
-            box-shadow: 0 8px 48px 0 rgba(255, 215, 0, 0.18);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .logo-icon svg {
-            width: 76px;
-            height: 76px;
-            display: block;
-        }
-        .logo-ak {
-            font-family: 'Pacifico', cursive;
-            font-size: 3.5rem;
-            color: #ffe066;
-            margin-left: 10px;
-            margin-right: 10px;
-            letter-spacing: 2px;
-            position: relative;
-            z-index: 1;
-            text-shadow:
-                0 2px 8px #fffbe6,
-                0 2px 4px #e6b800,
-                0 0px 24px #fffbe6;
-        }
-        h1 {
-            font-family: 'Pacifico', cursive;
-            font-size: 3.5rem;
-            margin: 0;
-            letter-spacing: 2px;
-            position: relative;
-            z-index: 1;
-            color: #f7f6f2;
-            text-shadow:
-                0 2px 8px #ffe066,
-                0 2px 4px #e6b800,
-                0 0px 24px #fffbe6;
-        }
-        .container {
-            max-width: 700px;
-            margin: 40px auto;
-            background: #fffde7;
-            border-radius: 18px;
-            box-shadow: 0 2px 16px rgba(255, 215, 0, 0.13);
-            padding: 32px 28px;
-            position: relative;
-            z-index: 1;
-        }
-        h2 {
-            color: #e6b800;
-            font-size: 2rem;
-            margin-bottom: 12px;
-            font-family: 'Segoe Script', cursive;
-            text-shadow: 1px 1px 6px #fff8dc;
-        }
-        p {
-            color: #6d4c00;
-            font-size: 1.2rem;
-            line-height: 1.7;
-            margin-bottom: 0;
-        }
-        /* Decorative accents */
-        .accent {
-            width: 60px;
-            height: 6px;
-            background: linear-gradient(90deg, #ffe066 0%, #ffd700 100%);
-            border-radius: 3px;
-            margin: 0 auto 24px auto;
-        }
-        /* Aim box styling */
-        .aim-container {
-            max-width: 700px;
-            margin: 40px auto;
-            background: #fff;
-            border-radius: 18px;
-            box-shadow: 0 2px 16px rgba(255, 215, 0, 0.13);
-            padding: 32px 28px;
-            position: relative;
-            z-index: 1;
-        }
-        .aim-title {
-            color: #d4af37;
-            font-family: 'Segoe Script', cursive;
-            margin-top: 0;
-            margin-bottom: 16px;
-            text-shadow: 1px 1px 6px #fff8dc;
-            font-size: 2rem;
-        }
-        .aim-desc {
-            color: #6d4c00;
-            font-size: 1.15rem;
-            line-height: 1.7;
-            margin-bottom: 18px;
-        }
-        .aim-list {
-            color: #6d4c00;
-            font-size: 1.15rem;
-            line-height: 1.7;
-            padding-left: 22px;
-            margin: 0;
-        }
-    </style>
-</head>
-<body>
-    <!-- Glassy yellow background objects -->
-    <div class="bg-object circle1"></div>
-    <div class="bg-object circle2"></div>
-    <div class="bg-object circle3"></div>
-    <div class="bg-object circle4"></div>
     <div class="bg-object circle5"></div>
     <div class="bg-object triangle1"></div>
-    <div class="bg-object triangle2"></div>
+        <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
     <div class="bg-object triangle3"></div>
-    <div class="bg-object hexagon1"></div>
+                <svg width="100%" height="180" viewBox="0 0 900 180" fill="none" xmlns="http://www.w3.org/2000/svg">
     <div class="bg-object hexagon2"></div>
     <div class="bg-object hexagon3"></div>
 
@@ -286,32 +91,7 @@
             </span>
             <h1> Blogs</h1>
         </div>
-    </header>
-    <div class="container">
-        <div class="accent"></div>
-        <h2>Introduction</h2>
-        <p>
-            Hello! I'm a Computer Science and Engineering (CSE) student passionate about technology, creativity, and sharing knowledge. Welcome to AK Blogs, where I write about my journey, experiences, and insights in the world of computing. Dive in to explore articles, tutorials, and stories crafted with enthusiasm and a touch of yellow!
-        </p>
-    </div>
-    <!-- Transition element -->
-    <div id="aim-transition" style="
-        width: 100vw;
-        height: 40px;
-        background: linear-gradient(90deg, #fffbe6 0%, #ffe066 100%);
-        margin: 0 auto;
-        opacity: 0.7;
-        border: none;
-        z-index: 1;
-    "></div>
-    <!-- Aim Box Start -->
-    <div class="aim-container" id="aim-section">
-        <h2 class="aim-title">Aim</h2>
-        <div class="aim-desc">
-            My ambitions as a coder and automation engineer are focused on continuous growth and impactful contributions. Over the next 4 years, before completing my degree, I aim to:
-        </div>
-        <ul class="aim-list">
-            <li>Master core programming languages and concepts.</li>
+
             <li>Develop strong problem-solving and analytical skills.</li>
             <li>Build real-world projects in web and mobile development.</li>
             <li>Gain hands-on experience in automation and robotics.</li>
@@ -320,62 +100,7 @@
             <li>Grow as a coder and automation engineer, ready for industry challenges before completing my degree in 4 years.</li>
         </ul>
     </div>
-    <script>
-        // Smooth movement and scaling for background objects on scroll
-        const aimSection = document.getElementById('aim-section');
-        const bgObjects = document.querySelectorAll('.bg-object');
-        const objectInitials = Array.from(bgObjects).map(obj => {
-            return {
-                top: obj.style.top,
-                left: obj.style.left,
-                right: obj.style.right,
-                bottom: obj.style.bottom,
-                transform: obj.style.transform || ''
-            };
-        });
-
-        function isElementAboveViewport(el) {
-            const rect = el.getBoundingClientRect();
-            return rect.bottom < 0;
-        }
-
-        function isElementInViewport(el) {
-            const rect = el.getBoundingClientRect();
-            return (
-                rect.top < window.innerHeight &&
-                rect.bottom > 0
-            );
-        }
-
-        window.addEventListener('scroll', function() {
-            const scrollY = window.scrollY || window.pageYOffset;
-            const aimRect = aimSection.getBoundingClientRect();
-            const aimTop = aimRect.top + scrollY;
-            const aimBottom = aimRect.bottom + scrollY;
-            const winHeight = window.innerHeight;
-
-            bgObjects.forEach((obj, i) => {
-                // Move objects smoothly based on scroll
-                let moveY = scrollY * (0.08 + i * 0.01); // Each object moves at a slightly different rate
-                obj.style.transition = 'transform 0.7s cubic-bezier(.4,2,.3,1), box-shadow 0.7s, top 0.7s, left 0.7s, right 0.7s, bottom 0.7s';
-                obj.style.transform = objectInitials[i].transform + ` translateY(${moveY}px)`;
-
-                // If Aim section is above viewport, scale up to 2x
-                if (isElementAboveViewport(aimSection)) {
-                    obj.style.transform = objectInitials[i].transform + ` translateY(${moveY}px) scale(2)`;
-                    obj.style.boxShadow = '0 12px 64px 0 rgba(255, 215, 0, 0.28)';
-                } else if (isElementInViewport(aimSection)) {
-                    obj.style.transform = objectInitials[i].transform + ` translateY(${moveY}px) scale(1.35)`;
-                    obj.style.boxShadow = '0 8px 48px 0 rgba(255, 215, 0, 0.22)';
-                } else {
-                    obj.style.transform = objectInitials[i].transform + ` translateY(${moveY}px) scale(1)`;
-                    obj.style.boxShadow = '0 4px 24px 0 rgba(255, 215, 0, 0.12)';
-                }
-            });
-        });
-        // Initial trigger
-        window.dispatchEvent(new Event('scroll'));
-    </script>
+    <script src="active.js"></script>
     <footer>
   <p>© 2025 AK Blogs | Designed by Ajay</p>
   <p>Contact: akblogs@example.com</p>

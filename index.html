@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AK Blog - A Computer Science and Engineering student's personal blog about technology, creativity, and knowledge sharing.">
+  <meta name="keywords" content="computer science, engineering, technology, blog, programming, web development">
+  <meta name="author" content="AK">
+  <meta property="og:title" content="AK Blog - Technology & Creativity">
+  <meta property="og:description" content="Personal blog of a Computer Science and Engineering student passionate about technology and knowledge sharing.">
+  <meta property="og:type" content="website">
+  <title>AK Blog - Technology & Creativity</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='%23ffe066'%3EAK%3C/text%3E%3C/svg%3E">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <svg class="logo-svg" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#ffe066;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#e6b800;stop-opacity:1" />
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+              <feMerge> 
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <text x="10" y="40" font-family="Pacifico" font-size="32" fill="url(#logoGradient)" filter="url(#glow)">AK</text>
+        </svg>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#intro" class="nav-link">Home</a></li>
+        <li><a href="#aim-section" class="nav-link">Aims</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#blog" class="nav-link">Blog</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Background Shapes -->
+  <div class="background-shapes">
+    <div class="shape circle" data-speed="0.5"></div>
+    <div class="shape triangle" data-speed="0.3"></div>
+    <div class="shape hexagon" data-speed="0.7"></div>
+    <div class="shape circle" data-speed="0.4"></div>
+    <div class="shape triangle" data-speed="0.6"></div>
+    <div class="shape hexagon" data-speed="0.2"></div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="intro" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-logo">
+          <svg class="hero-logo-svg" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="heroLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#ffe066;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#fff;stop-opacity:0.8" />
+                <stop offset="100%" style="stop-color:#e6b800;stop-opacity:1" />
+              </linearGradient>
+              <filter id="heroGlow">
+                <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+                <feMerge> 
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <text x="20" y="70" font-family="Pacifico" font-size="64" fill="url(#heroLogoGradient)" filter="url(#heroGlow)">AK</text>
+          </svg>
+        </div>
+        <h1 class="hero-title">Welcome to AK Blog</h1>
+        <p class="hero-description">
+          I'm a Computer Science and Engineering student passionate about technology, creativity, and sharing knowledge.
+        </p>
+        <div class="hero-buttons">
+          <a href="#blog" class="btn btn-primary">Read Blog</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aim Section -->
+  <section id="aim-section" class="aims">
+    <div class="container">
+      <h2 class="section-title">My Career Goals</h2>
+      <div class="aims-grid">
+        <div class="aim-card">
+          <div class="aim-icon">🚀</div>
+          <h3>Software Development Excellence</h3>
+          <p>Master modern programming languages and frameworks to build innovative software solutions.</p>
+        </div>
+        <div class="aim-card">
+          <div class="aim-icon">🤖</div>
+          <h3>AI & Machine Learning</h3>
+          <p>Develop expertise in artificial intelligence and machine learning technologies.</p>
+        </div>
+        <div class="aim-card">
+          <div class="aim-icon">🌐</div>
+          <h3>Full-Stack Web Development</h3>
+          <p>Create responsive, user-friendly web applications with modern technologies.</p>
+        </div>
+        <div class="aim-card">
+          <div class="aim-icon">📱</div>
+          <h3>Mobile App Development</h3>
+          <p>Build cross-platform mobile applications that solve real-world problems.</p>
+        </div>
+        <div class="aim-card">
+          <div class="aim-icon">☁️</div>
+          <h3>Cloud Computing</h3>
+          <p>Master cloud platforms and DevOps practices for scalable applications.</p>
+        </div>
+        <div class="aim-card">
+          <div class="aim-icon">🔒</div>
+          <h3>Cybersecurity</h3>
+          <p>Understand security principles to build secure and robust systems.</p>
+        </div>
+        <div class="aim-card">
+          <div class="aim-icon">💡</div>
+          <h3>Innovation & Entrepreneurship</h3>
+          <p>Create technology solutions that make a positive impact on society.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://picsum.photos/400/250?random=1" alt="Web Application Dashboard">
+          </div>
+          <div class="project-content">
+            <h3>Web Application Dashboard</h3>
+            <p>A modern dashboard built with React and Node.js featuring real-time data visualization.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://picsum.photos/400/250?random=2" alt="Mobile App Interface">
+          </div>
+          <div class="project-content">
+            <h3>Mobile Learning App</h3>
+            <p>Cross-platform mobile application for interactive learning with gamification elements.</p>
+            <div class="project-tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Redux</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://picsum.photos/400/250?random=3" alt="AI Model Visualization">
+          </div>
+          <div class="project-content">
+            <h3>AI Model Trainer</h3>
+            <p>Machine learning platform for training and deploying custom AI models with intuitive interface.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Flask</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="blog">
+    <div class="container">
+      <h2 class="section-title">Latest Blog Posts</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://picsum.photos/400/200?random=4" alt="JavaScript ES6 Features">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-date">Dec 15, 2024</span>
+              <span class="blog-category">JavaScript</span>
+            </div>
+            <h3>Modern JavaScript: ES6+ Features You Should Know</h3>
+            <p>Explore the latest JavaScript features that will make your code more efficient and readable.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://picsum.photos/400/200?random=5" alt="React Best Practices">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-date">Dec 12, 2024</span>
+              <span class="blog-category">React</span>
+            </div>
+            <h3>React Best Practices for 2024</h3>
+            <p>Learn the latest React patterns and best practices to build maintainable applications.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://picsum.photos/400/200?random=6" alt="CSS Grid Layout">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-date">Dec 10, 2024</span>
+              <span class="blog-category">CSS</span>
+            </div>
+            <h3>Mastering CSS Grid: A Complete Guide</h3>
+            <p>Everything you need to know about CSS Grid to create complex, responsive layouts.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://picsum.photos/400/200?random=7" alt="Node.js Performance">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-date">Dec 8, 2024</span>
+              <span class="blog-category">Node.js</span>
+            </div>
+            <h3>Optimizing Node.js Performance</h3>
+            <p>Tips and techniques to improve your Node.js application performance and scalability.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Let's Connect</h3>
+          <p>I'm always interested in discussing technology, sharing knowledge, and exploring new opportunities.</p>
+          <div class="contact-links">
+            <a href="mailto:ak@example.com" class="contact-link">
+              <span class="contact-icon">📧</span>
+              ak@example.com
+            </a>
+            <a href="https://github.com/ak" class="contact-link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-icon">🐙</span>
+              GitHub
+            </a>
+            <a href="https://linkedin.com/in/ak" class="contact-link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-icon">💼</span>
+              LinkedIn
+            </a>
+            <a href="https://twitter.com/ak" class="contact-link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-icon">🐦</span>
+              Twitter
+            </a>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form class="form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 AK Blog. Built with passion for technology and knowledge sharing.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
