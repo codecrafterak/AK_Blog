@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>AK Blogs</title>
+    <nav class="navbar">
+  <ul>
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#aim-section">Aim</a></li>
+    <!-- Add more links as needed -->
+  </ul>
+</nav>
     <style>
+        @media (max-width: 768px) {
+  .logo-wrap {
+    flex-direction: column;
+  }
+  .container, .aim-container {
+    padding: 20px;
+    margin: 20px;
+  }
+}
         body {
             background: linear-gradient(135deg, #fffbe6 0%, #ffe066 100%);
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -360,5 +376,9 @@
         // Initial trigger
         window.dispatchEvent(new Event('scroll'));
     </script>
+    <footer>
+  <p>© 2025 AK Blogs | Designed by Ajay</p>
+  <p>Contact: akblogs@example.com</p>
+</footer>
 </body>
 </html>
