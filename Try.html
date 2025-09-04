@@ -21,6 +21,7 @@
             -webkit-backdrop-filter: blur(6px);
             box-shadow: 0 4px 24px 0 rgba(255, 215, 0, 0.12);
             border: 1.5px solid rgba(255, 215, 0, 0.18);
+            transition: transform 0.7s cubic-bezier(.4,2,.3,1), box-shadow 0.7s;
         }
         /* Circles */
         .circle1 { width: 180px; height: 180px; background: rgba(255, 224, 102, 0.7); border-radius: 50%; top: 40px; left: -60px; }
@@ -63,6 +64,13 @@
         .hexagon1 { top: 220px; left: 480px; background: rgba(255, 224, 102, 0.6); }
         .hexagon2 { bottom: 80px; right: 180px; background: rgba(255, 236, 128, 0.6); }
         .hexagon3 { top: 120px; right: 40px; background: rgba(255, 241, 118, 0.6); }
+
+        /* Enlarged state for transition */
+        .bg-object.enlarged {
+            transform: scale(1.35);
+            box-shadow: 0 8px 48px 0 rgba(255, 215, 0, 0.22);
+        }
+
         header {
             background: linear-gradient(90deg, #ffd700 60%, #e6b800 100%);
             padding: 40px 0 20px 0;
@@ -110,6 +118,38 @@
             border-radius: 3px;
             margin: 0 auto 24px auto;
         }
+        /* Aim box styling */
+        .aim-container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 2px 16px rgba(255, 215, 0, 0.13);
+            padding: 32px 28px;
+            position: relative;
+            z-index: 1;
+        }
+        .aim-title {
+            color: #d4af37;
+            font-family: 'Segoe Script', cursive;
+            margin-top: 0;
+            margin-bottom: 16px;
+            text-shadow: 1px 1px 6px #fff8dc;
+            font-size: 2rem;
+        }
+        .aim-desc {
+            color: #6d4c00;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+        .aim-list {
+            color: #6d4c00;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            padding-left: 22px;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -135,40 +175,51 @@
         <p>
             Hello! I'm a Computer Science and Engineering (CSE) student passionate about technology, creativity, and sharing knowledge. Welcome to AK Blogs, where I write about my journey, experiences, and insights in the world of computing. Dive in to explore articles, tutorials, and stories crafted with enthusiasm and a touch of yellow!
         </p>
-        <!-- Aim Box Start -->
-        <div class="aim-box" style="
-            background: linear-gradient(135deg, #fffde7 60%, #ffe066 100%);
-            border-radius: 14px;
-            box-shadow: 0 2px 12px rgba(255, 215, 0, 0.10);
-            margin-top: 32px;
-            padding: 24px 20px;
-            position: relative;
-            z-index: 1;
-        ">
-            <h2 style="
-                color: #d4af37;
-                font-family: 'Segoe Script', cursive;
-                margin-top: 0;
-                margin-bottom: 16px;
-                text-shadow: 1px 1px 6px #fff8dc;
-            ">Aim</h2>
-            <ul style="
-                color: #6d4c00;
-                font-size: 1.15rem;
-                line-height: 1.7;
-                padding-left: 22px;
-                margin: 0;
-            ">
-                <li>Master core programming languages and concepts.</li>
-                <li>Develop strong problem-solving and analytical skills.</li>
-                <li>Build real-world projects in web and mobile development.</li>
-                <li>Gain hands-on experience in automation and robotics.</li>
-                <li>Contribute to open-source communities and collaborate globally.</li>
-                <li>Learn and apply AI, machine learning, and data science techniques.</li>
-                <li>Grow as a coder and automation engineer, ready for industry challenges before completing my degree in 4 years.</li>
-            </ul>
-        </div>
-        <!-- Aim Box End -->
     </div>
+    <!-- Transition element -->
+    <div id="aim-transition" style="
+        width: 100vw;
+        height: 40px;
+        background: linear-gradient(90deg, #fffbe6 0%, #ffe066 100%);
+        margin: 0 auto;
+        opacity: 0.7;
+        border: none;
+        z-index: 1;
+    "></div>
+    <!-- Aim Box Start -->
+    <div class="aim-container" id="aim-section">
+        <h2 class="aim-title">Aim</h2>
+        <div class="aim-desc">
+            My ambitions as a coder and automation engineer are focused on continuous growth and impactful contributions. Over the next 4 years, before completing my degree, I aim to:
+        </div>
+        <ul class="aim-list">
+            <li>Master core programming languages and concepts.</li>
+            <li>Develop strong problem-solving and analytical skills.</li>
+            <li>Build real-world projects in web and mobile development.</li>
+            <li>Gain hands-on experience in automation and robotics.</li>
+            <li>Contribute to open-source communities and collaborate globally.</li>
+            <li>Learn and apply AI, machine learning, and data science techniques.</li>
+            <li>Grow as a coder and automation engineer, ready for industry challenges before completing my degree in 4 years.</li>
+        </ul>
+    </div>
+    <script>
+        // Transition effect for background objects when Aim is in view
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top < window.innerHeight &&
+                rect.bottom > 0
+            );
+        }
+        const aimSection = document.getElementById('aim-section');
+        const bgObjects = document.querySelectorAll('.bg-object');
+        window.addEventListener('scroll', function() {
+            if (isElementInViewport(aimSection)) {
+                bgObjects.forEach(obj => obj.classList.add('enlarged'));
+            } else {
+                bgObjects.forEach(obj => obj.classList.remove('enlarged'));
+            }
+        });
+    </script>
 </body>
 </html>
