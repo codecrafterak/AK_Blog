@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta property="og:title" content="AK Blogs - Technology & Creativity">
+    <meta property="og:description" content="Personal blog of a Computer Science and Engineering student passionate about technology and knowledge sharing.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AK Blogs - Technology & Creativity">
+    <meta name="twitter:description" content="Personal blog of a Computer Science and Engineering student passionate about technology and knowledge sharing.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80">
     <meta name="description" content="AK Blogs - Personal blog by a CSE student. Insights, tutorials, and stories on coding, automation, and technology.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="blog, coding, CSE, automation, technology, AK Blogs">
@@ -8,39 +16,134 @@
     <meta charset="UTF-8">
     <title>AK Blogs</title>
     <!-- Navigation moved to body for semantic structure -->
+    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
-    <nav class="navbar" aria-label="Main Navigation" role="navigation">
-            <ul>
-                <li><a href="#intro" class="nav-link active">Introduction</a></li>
-                <li><a href="#aim-section" class="nav-link">Aim</a></li>
-                <li><a href="#blog-posts" class="nav-link">Blog</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+        <nav class="navbar" aria-label="Main Navigation" role="navigation">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <svg class="logo-svg" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ffe066;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#e6b800;stop-opacity:1" />
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge> 
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <text x="10" y="40" font-family="Pacifico" font-size="32" fill="url(#logoGradient)" filter="url(#glow)">AK</text>
+                    </svg>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#intro" class="nav-link active">Home</a></li>
+                    <li><a href="#aim-section" class="nav-link">Aims</a></li>
+                    <li><a href="#blog-posts" class="nav-link">Blog</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger-menu" aria-label="Open navigation" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </nav>
         <div id="loading-overlay">
-            <div class="loader"></div>
+                <div class="loader"></div>
         </div>
-    <section id="blog-posts">
-            <div class="blog-card">
-                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="A laptop and coffee cup on a desk, representing coding and blogging" class="blog-thumb">
-                <div class="blog-content">
-                    <h3 class="blog-title">How I Started Coding</h3>
-                    <p class="blog-desc">A brief story about my journey into programming, the challenges, and the excitement of building my first project.</p>
-                    <a href="#" class="read-more">Read More</a>
+
+        <!-- Hero Section -->
+        <section id="intro" class="hero">
+        <!-- Profile/About Section -->
+        <section id="about" class="profile-section">
+            <div class="container">
+                <div class="profile-card">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ajay - AK Blogs Author" class="profile-avatar" style="width:120px;height:120px;border-radius:50%;box-shadow:0 2px 12px rgba(255,215,0,0.10);margin-bottom:18px;">
+                    <h2 class="profile-name">Ajay</h2>
+                    <h3 class="profile-title">CSE Student & Blogger</h3>
+                    <p class="profile-bio">
+                        Hi, I'm Ajay, a Computer Science and Engineering student passionate about technology, automation, and sharing knowledge. I love building creative solutions, writing about my journey, and connecting with fellow tech enthusiasts. Welcome to AK Blogs!
+                    </p>
+                    <div class="profile-links">
+                        <a href="mailto:akblogs@example.com" class="profile-link">📧 Email</a>
+                        <a href="https://github.com/codecrafterak" class="profile-link" target="_blank" rel="noopener">🐙 GitHub</a>
+                        <a href="https://linkedin.com/in/ajay" class="profile-link" target="_blank" rel="noopener">💼 LinkedIn</a>
+                    </div>
                 </div>
             </div>
         </section>
-        <style>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-logo">
+                        <svg class="hero-logo-svg" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="heroLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ffe066;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#fff;stop-opacity:0.8" />
+                                    <stop offset="100%" style="stop-color:#e6b800;stop-opacity:1" />
+                                </linearGradient>
+                                <filter id="heroGlow">
+                                    <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+                                    <feMerge> 
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <text x="20" y="70" font-family="Pacifico" font-size="64" fill="url(#heroLogoGradient)" filter="url(#heroGlow)">AK</text>
+                        </svg>
+                    </div>
+                    <h1 class="hero-title">Welcome to AK Blog</h1>
+                    <p class="hero-description">
+                        I'm a Computer Science and Engineering student passionate about technology, creativity, and sharing knowledge.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#blog-posts" class="btn btn-primary">Read Blog</a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section id="blog-posts">
+        <div class="blog-card">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="A laptop and coffee cup on a desk, representing coding and blogging" class="blog-thumb">
+            <div class="blog-content">
+                <h3 class="blog-title">How I Started Coding</h3>
+                <p class="blog-desc">A brief story about my journey into programming, the challenges, and the excitement of building my first project.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+                </section>
 
-                <input type="email" id="email" name="email" required style="width:100%;padding:8px;margin-bottom:12px;border-radius:6px;border:1px solid #ffe066;">
+                <!-- Comments Section -->
+                <section id="comments" class="comments-section">
+                    <div class="container">
+                        <h2 class="section-title">Comments</h2>
+                        <form id="comment-form" class="comment-form">
+                            <input type="text" id="comment-name" name="name" placeholder="Your Name" required style="margin-bottom:12px;padding:10px;border-radius:6px;border:1px solid #ffe066;width:100%;">
+                            <textarea id="comment-text" name="comment" placeholder="Your Comment" required style="margin-bottom:12px;padding:10px;border-radius:6px;border:1px solid #ffe066;width:100%;height:80px;"></textarea>
+                            <button type="submit" class="btn btn-primary" style="padding:10px 24px;border-radius:6px;background:#ffe066;color:#6d4c00;font-weight:bold;border:none;">Post Comment</button>
+                        </form>
+                        <div id="comments-list" class="comments-list">
+                            <!-- Comments will be loaded here by backend -->
+                        </div>
+                    </div>
+                </section>
+        <section id="contact">
+            <form id="contact-form">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
                 <label for="message">Message:</label><br>
-                <textarea id="message" name="message" required style="width:100%;padding:8px;margin-bottom:18px;border-radius:6px;border:1px solid #ffe066;"></textarea>
-                <button type="submit" style="background:linear-gradient(90deg,#ffe066 0%,#ffd700 100%);color:#6d4c00;padding:10px 24px;border:none;border-radius:6px;font-weight:bold;">Send</button>
-                    <input type="email" id="email" name="email" required>
-            <div id="form-message" style="color:#e6b800;margin-top:16px;"></div>
-                    <textarea id="message" name="message" required></textarea>
-        <div style="max-width:700px;margin:40px auto;">
-                    <button type="submit">Send</button>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div id="form-message"></div>
+        </section>
+        <div class="search-bar-container">
+            <input type="text" id="search-bar" placeholder="Search blog posts...">
         </div>
                 <div id="form-message"></div>
         .hidden-section {
@@ -54,11 +157,34 @@
     <div class="bg-object triangle1"></div>
         <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
     <div class="bg-object triangle3"></div>
-                <svg width="100%" height="180" viewBox="0 0 900 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="100%" height="180" viewBox="0 0 900 180" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
     <div class="bg-object hexagon2"></div>
     <div class="bg-object hexagon3"></div>
 
-    <header>
+    <div class="container">
+    <div class="container">
+        <div class="accent"></div>
+        <h2 id="intro">Introduction</h2>
+        <p>
+            Hello! I'm a Computer Science and Engineering (CSE) student passionate about technology, creativity, and sharing knowledge. Welcome to AK Blogs, where I write about my journey, experiences, and insights in the world of computing. Dive in to explore articles, tutorials, and stories crafted with enthusiasm and a touch of yellow!
+        </p>
+    </div>
+    <div id="aim-transition"></div>
+    <div class="aim-container" id="aim-section">
+        <h2 class="aim-title">Aim</h2>
+        <div class="aim-desc">
+            My ambitions as a coder and automation engineer are focused on continuous growth and impactful contributions. Over the next 4 years, before completing my degree, I aim to:
+        </div>
+        <ul class="aim-list">
+            <li>Master core programming languages and concepts.</li>
+            <li>Develop strong problem-solving and analytical skills.</li>
+            <li>Build real-world projects in web and mobile development.</li>
+            <li>Gain hands-on experience in automation and robotics.</li>
+            <li>Contribute to open-source communities and collaborate globally.</li>
+            <li>Learn and apply AI, machine learning, and data science techniques.</li>
+            <li>Grow as a coder and automation engineer, ready for industry challenges before completing my degree in 4 years.</li>
+        </ul>
+    </div>
         <div class="futuristic-bg">
             <svg width="100%" height="180" viewBox="0 0 900 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:0;">
                 <!-- Left Burj Al Arab (7-star hotel) stylized -->
@@ -85,11 +211,12 @@
         </div>
         <div class="logo-wrap">
             <span class="logo-icon">
-                <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <text x="19" y="25" text-anchor="middle" font-family="Pacifico, cursive" font-size="28" fill="#ffe066" dominant-baseline="middle">AK</text>
+                <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="38" cy="38" r="36" fill="#ffe066" stroke="#e6b800" stroke-width="4"/>
+                    <text x="38" y="44" text-anchor="middle" font-family="Pacifico, cursive" font-size="32" fill="#b8860b" dominant-baseline="middle">AK</text>
                 </svg>
             </span>
-            <h1> Blogs</h1>
+            <h1 style="margin-left: 18px;">Blogs</h1>
         </div>
 
             <li>Develop strong problem-solving and analytical skills.</li>
@@ -100,8 +227,9 @@
             <li>Grow as a coder and automation engineer, ready for industry challenges before completing my degree in 4 years.</li>
         </ul>
     </div>
-    <script src="active.js"></script>
+    <script src="active.js" async></script>
     <footer>
+<button id="back-to-top" aria-label="Back to top" style="display:none;position:fixed;bottom:24px;right:24px;padding:14px 20px;border-radius:50%;background:#ffe066;color:#6d4c00;font-size:1.5rem;box-shadow:0 2px 12px rgba(255,215,0,0.18);border:none;cursor:pointer;z-index:1001;transition:opacity 0.4s;">↑</button>
   <p>© 2025 AK Blogs | Designed by Ajay</p>
   <p>Contact: akblogs@example.com</p>
 </footer>
