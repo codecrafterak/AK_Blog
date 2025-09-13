@@ -1,4 +1,3 @@
-
 /**
  * AK Blog - Interactive JavaScript
  * Handles navigation, animations, and user interactions
@@ -397,6 +396,29 @@ document.addEventListener('DOMContentLoaded', () => {
     
     Feel free to explore the code!
   `);
+  
+  const toggleBtn = document.getElementById('dark-mode-toggle');
+  // Set initial theme based on localStorage or system preference
+  function setTheme(mode) {
+    if (mode === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️';
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-mode');
+      toggleBtn.textContent = '🌙';
+      localStorage.setItem('theme', 'light');
+    }
+  }
+  const savedMode = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  setTheme(savedMode ? savedMode : (prefersDark ? 'dark' : 'light'));
+
+  // Toggle theme on button click
+  toggleBtn.addEventListener('click', function () {
+    const isDark = document.body.classList.contains('dark-mode');
+    setTheme(isDark ? 'light' : 'dark');
+  });
 });
 
 // Add CSS for animations
