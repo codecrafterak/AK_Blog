@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EmptyBin - Smart IoT Waste Management System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Background Shapes -->
+  <div class="background-shapes">
+    <div class="shape circle"></div>
+    <div class="shape hexagon"></div>
+    <div class="shape triangle"></div>
+    <div class="shape circle"></div>
+    <div class="shape hexagon"></div>
+    <div class="shape triangle"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <svg class="logo-svg" width="120" height="80" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="heroLogoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffe066"/>
+              <stop offset="100%" stop-color="#ffd700"/>
+            </linearGradient>
+            <filter id="heroGlow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <text y="50" x="10" font-family="Cursive" font-size="40"
+                fill="url(#heroLogoGradient)" filter="url(#heroGlow)" font-weight="bold">
+            🌍 EB
+          </text>
+        </svg>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#introduction" class="nav-link">Introduction</a></li>
+        <li><a href="#problem" class="nav-link">Problem</a></li>
+        <li><a href="#solution" class="nav-link">Solution</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#impact" class="nav-link">Impact</a></li>
+        <li><a href="#sustainability" class="nav-link">Sustainability</a></li>
+        <li><a href="#demo" class="nav-link">Demo Video</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-logo">
+        <svg class="hero-logo-svg" width="200" height="120" xmlns="http://www.w3.org/2000/svg">
+          <text y="90" x="10" font-family="Cursive" font-size="90"
+                fill="url(#heroLogoGradient)" filter="url(#heroGlow)" font-weight="bold">
+            🌍 EmptyBin
+          </text>
+        </svg>
+      </div>
+      <h1 class="hero-title">Smart IoT Waste Management System</h1>
+      <p class="hero-description">Transforming urban waste management through IoT technology, mathematical optimization, and human-centered design. Making cities cleaner, smarter, and more sustainable.</p>
+      <div class="hero-buttons">
+        <a href="#introduction" class="btn btn-primary">Learn More</a>
+        <a href="#demo" class="btn btn-secondary">Watch Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section id="introduction" class="container aims">
+    <h2 class="section-title">Introduction</h2>
+    <div class="aims-grid">
+      <div class="aim-card">
+        <div class="aim-icon">🏙️</div>
+        <h3>The Urban Challenge</h3>
+        <p>Urbanization has transformed cities into bustling hubs of activity, but it has also intensified the challenge of waste management. Overflowing bins, inefficient collection routes, and unpredictable waste generation patterns remain persistent problems.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">📊</div>
+        <h3>Traditional Limitations</h3>
+        <p>Traditional systems rely on fixed schedules or manual monitoring, which often result in half-empty bins being serviced while full bins overflow. This not only wastes resources but also creates public health risks and environmental pollution.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">💡</div>
+        <h3>The EmptyBin Vision</h3>
+        <p>EmptyBin was conceived to address these challenges by combining IoT technology, mathematical optimization, and human-centered design. A solution that transforms frustration into civic pride.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Statement Section -->
+  <section id="problem" class="container aims">
+    <h2 class="section-title">Problem Statement</h2>
+    <div class="aims-grid">
+      <div class="aim-card">
+        <div class="aim-icon">⚠️</div>
+        <h3>Mismatch in Scheduling</h3>
+        <p>The core issue lies in the mismatch between waste generation and collection schedules. Municipal trucks often follow rigid routes, consuming fuel and manpower even when bins are not full.</p>
+        <p style="margin-top: 12px; padding: 12px; background: rgba(255,224,102,0.1); border-left: 3px solid var(--primary-gold); border-radius: 8px;">Meanwhile, bins in high-traffic areas overflow, leading to unsanitary conditions and public health risks.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">🔧</div>
+        <h3>Inefficient Monitoring</h3>
+        <p>Manual monitoring is labor-intensive and reactive, while complaint-based systems only respond after problems occur. This creates a cycle of inefficiency that wastes valuable resources.</p>
+        <p style="margin-top: 12px; padding: 12px; background: rgba(255,224,102,0.1); border-left: 3px solid var(--primary-gold); border-radius: 8px;">Staff morale suffers, and citizen trust in municipal services erodes over time.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">🌍</div>
+        <h3>Environmental Impact</h3>
+        <p>This inefficiency results in wasted fuel, unnecessary CO₂ emissions, environmental damage, and eroded public trust in governance. Cities need a smarter approach.</p>
+        <p style="margin-top: 12px; padding: 12px; background: rgba(255,224,102,0.1); border-left: 3px solid var(--primary-gold); border-radius: 8px;">The environmental cost extends beyond emissions—overflowing bins contaminate surroundings and harm ecosystems.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section id="solution" class="container aims">
+    <h2 class="section-title">Proposed Solution</h2>
+    <div class="aims-grid">
+      <div class="aim-card" style="grid-column: 1 / -1;">
+        <div class="aim-icon">🎯</div>
+        <h3>Smart Sensor-Driven System</h3>
+        <p>EmptyBin introduces a smart, sensor-driven waste management system. Each bin is equipped with ultrasonic sensors that measure fill levels in real time. When a bin approaches capacity, data is transmitted wirelessly to a centralized dashboard.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">📱</div>
+        <h3>Centralized Dashboard</h3>
+        <p>The dashboard provides municipal authorities with live updates, enabling them to prioritize bins that require immediate attention. Real-time data visualization makes decision-making faster and more accurate.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">🗺️</div>
+        <h3>Optimized Routes</h3>
+        <p>A mobile app guides collection staff with optimized routes, ensuring trucks service full bins first. This reduces travel time, fuel consumption, and operational costs significantly.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">🧮</div>
+        <h3>Mathematical Intelligence</h3>
+        <p>By applying differential calculus and optimization algorithms, EmptyBin calculates waste velocity and momentum, allowing predictive scheduling rather than reactive responses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="container aims">
+    <h2 class="section-title">Distinctive Features</h2>
+    <div class="aims-grid">
+      <div class="aim-card">
+        <div class="aim-icon">⏱️</div>
+        <h3>Real-Time Monitoring</h3>
+        <p>Continuous sensing prevents overflow before it occurs. Sensors provide updates every few minutes, ensuring no bin is left unattended until it's too late.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">🧠</div>
+        <h3>Mathematical Intelligence</h3>
+        <p>Optimization algorithms model waste flow scientifically, unlike GPS-only systems. This includes predictive analytics based on historical patterns and real-time data.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">🔌</div>
+        <h3>Modular Design</h3>
+        <p>Compatible with LoRa, GSM, or Wi-Fi, making it adaptable to diverse environments. Cities can choose the connectivity that best suits their infrastructure.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">📈</div>
+        <h3>Scalability</h3>
+        <p>Can be deployed in cities, campuses, malls, hospitals, or event venues. From small pilots to city-wide implementations, EmptyBin grows with your needs.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">❤️</div>
+        <h3>Human-Centered Impact</h3>
+        <p>Improves citizen satisfaction and staff morale, not just logistics. Clean streets lead to happier communities and more motivated workers.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">🌱</div>
+        <h3>Environmental Metrics</h3>
+        <p>Tracks fuel saved, CO₂ reduced, and overflow incidents prevented. Transparent reporting helps municipalities demonstrate their commitment to sustainability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact & Value Section -->
+  <section id="impact" class="container aims">
+    <h2 class="section-title">Utility & Value Proposition</h2>
+    <div class="aims-grid">
+      <div class="aim-card">
+        <div class="aim-icon">⛽</div>
+        <h3>Fuel Savings</h3>
+        <p><strong>~15 liters</strong> of fuel saved per truck per day. Over a year, this translates to thousands of liters and significant cost reduction for municipalities.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">⏰</div>
+        <h3>Time Efficiency</h3>
+        <p><strong>2–3 hours</strong> of manpower reduced per shift. Staff can focus on other critical tasks, improving overall operational efficiency.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">🚫</div>
+        <h3>Overflow Prevention</h3>
+        <p><strong>~80%</strong> of overflow incidents prevented. Cleaner streets mean healthier communities and improved quality of life for residents.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">🌿</div>
+        <h3>Carbon Reduction</h3>
+        <p><strong>~40 kg</strong> of CO₂ emissions cut daily per vehicle. Contributing directly to climate action and environmental sustainability goals.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">😊</div>
+        <h3>Citizen Satisfaction</h3>
+        <p>Citizens enjoy cleaner surroundings and feel proud of their city. This dual impact—technical and emotional—makes EmptyBin unique.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">💪</div>
+        <h3>Staff Empowerment</h3>
+        <p>Municipal staff feel empowered and efficient with clear guidance and modern tools. Better morale leads to better service delivery.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scalability Section -->
+  <section id="scalability" class="container aims">
+    <h2 class="section-title">Scalability & Market Potential</h2>
+    <div class="aims-grid">
+      <div class="aim-card">
+        <div class="aim-icon">🇮🇳</div>
+        <h3>Indian Market</h3>
+        <p>In India alone, over <strong>4,000 urban local bodies</strong> represent a massive opportunity. Smart city missions across the country create ready demand for innovative solutions.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">🌐</div>
+        <h3>Global Opportunity</h3>
+        <p>The smart waste management market is projected to exceed <strong>$5 billion by 2027</strong>. Cities worldwide are seeking sustainable, technology-driven solutions.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">🔧</div>
+        <h3>Adaptability</h3>
+        <p>EmptyBin's modular design ensures it can adapt to different infrastructures, making it suitable for municipalities, large campuses, commercial facilities, and event organizers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sustainability Section -->
+  <section id="sustainability" class="container aims">
+    <h2 class="section-title">Sustainability</h2>
+    <div class="aims-grid">
+      <div class="aim-card">
+        <div class="aim-icon">💰</div>
+        <h3>Economic Sustainability</h3>
+        <p>EmptyBin is not just innovative—it is commercially viable. Revenue streams include hardware sales, subscription fees for dashboard access, maintenance contracts, and data services for urban planners.</p>
+        <p style="margin-top: 12px; padding: 12px; background: rgba(255,224,102,0.1); border-left: 3px solid var(--primary-gold); border-radius: 8px;"><strong>Break-even period:</strong> 6–12 months with strong ROI. Clients benefit from reduced fuel costs, lower labor expenses, and fewer emergency cleanups.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">🌍</div>
+        <h3>Environmental Sustainability</h3>
+        <p>By reducing fuel consumption and preventing waste overflow, EmptyBin contributes directly to climate action. It supports UN Sustainable Development Goals (SDG 11: Sustainable Cities and Communities, and SDG 13: Climate Action).</p>
+        <p style="margin-top: 12px; padding: 12px; background: rgba(255,224,102,0.1); border-left: 3px solid var(--primary-gold); border-radius: 8px;">Cleaner streets, reduced emissions, and better recycling opportunities make it a green innovation with long-term ecological benefits.</p>
+      </div>
+      <div class="aim-card">
+        <div class="aim-icon">🎯</div>
+        <h3>Social Sustainability</h3>
+        <p>EmptyBin transforms citizen-government relationships. People see tangible improvements in their neighborhoods, leading to greater civic engagement and community pride.</p>
+        <p style="margin-top: 12px; padding: 12px; background: rgba(255,224,102,0.1); border-left: 3px solid var(--primary-gold); border-radius: 8px;">When residents trust their municipal services, entire communities thrive. EmptyBin creates this positive feedback loop.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conclusion Section -->
+  <section id="conclusion" class="container aims">
+    <h2 class="section-title">Conclusion</h2>
+    <div class="aims-grid">
+      <div class="aim-card" style="grid-column: 1 / -1;">
+        <div class="aim-icon">✨</div>
+        <h3>More Than a Product—A Vision</h3>
+        <p>EmptyBin redefines waste management by merging IoT technology, mathematical optimization, and human-centered design. It is technically sound, economically viable, and environmentally responsible.</p>
+        <p style="margin-top: 1rem; font-size: 1.1rem; line-height: 1.8;">More than a product, it is a vision for cleaner, smarter, and more sustainable cities. By addressing inefficiency at its root, EmptyBin empowers municipalities, engages citizens, and contributes to a healthier planet. The future of waste management is not about reacting to problems—it's about preventing them. EmptyBin makes that future possible today.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Video Section -->
+  <section id="demo" class="contact container">
+    <h2 class="section-title">Watch EmptyBin in Action</h2>
+    <p style="text-align: center; color: var(--text-light); max-width: 800px; margin: 0 auto 3rem auto; font-size: 1.1rem; line-height: 1.8;">
+      See how EmptyBin transforms waste management through real-time monitoring, intelligent routing, and predictive analytics. This demonstration showcases the complete system from sensor installation to route optimization.
+    </p>
+    <div style="max-width: 900px; margin: 0 auto; background: var(--glass-bg); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 2rem; box-shadow: 0 20px 40px rgba(255, 224, 102, 0.15);">
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; background: #000;">
+        <video 
+          controls 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;"
+          poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect fill='%23222' width='800' height='450'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='%23ffd700' text-anchor='middle' dominant-baseline='middle'%3E🌍 EmptyBin Demo Video%3C/text%3E%3C/svg%3E">
+          <source src="EmptyBin__Smart_Waste_Mgmt.mp4" type="video/mp4">
+          Your browser does not support the video tag. Please download the video to watch it.
+        </video>
+      </div>
+      <div style="margin-top: 2rem; text-align: center;">
+        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+          <strong style="color: var(--primary-gold);">📹 Video Overview:</strong><br>
+          Learn about sensor technology, dashboard features, mobile app functionality, route optimization algorithms, and real-world impact metrics.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 EmptyBin - Smart IoT Waste Management System. Building cleaner, smarter, and more sustainable cities.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu on link click
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Video play tracking (optional analytics)
+    const video = document.querySelector('video');
+    if (video) {
+      video.addEventListener('play', () => {
+        console.log('EmptyBin demo video started playing');
+      });
+      
+      video.addEventListener('ended', () => {
+        console.log('EmptyBin demo video completed');
+      });
+    }
+  </script>
+</body>
+</html>
