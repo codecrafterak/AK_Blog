@@ -55,11 +55,21 @@
   <section class="hero">
     <div class="hero-content">
       <div class="hero-logo">
-        <svg class="hero-logo-svg" width="2000" height="120" xmlns="http://www.w3.org/2000/svg">
-          <text y="90" x="10" font-family="Cursive" font-size="90"
-                fill="url(#heroLogoGradient)" filter="url(#heroGlow)" font-weight="bold">
-            EmptyBin
-          </text>
+        <svg class="hero-logo-svg" width="2000" height="120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EmptyBin logo">
+          <defs>
+            <linearGradient id="heroLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#ffe066;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#e6b800;stop-opacity:1" />
+            </linearGradient>
+            <filter id="heroGlow">
+              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <text x="10" y="90" font-family="Cursive" font-size="90" fill="url(#heroLogoGradient)" filter="url(#heroGlow)" font-weight="bold">EmptyBin</text>
         </svg>
       </div>
       <h1 class="hero-title">Smart IoT Waste Management System</h1>
