@@ -20,25 +20,22 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
-      <div class="nav-logo">
-        <svg class="logo-svg" width="120" height="80" xmlns="http://www.w3.org/2000/svg">
+       <div class="nav-logo">
+        <svg class="logo-svg" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="heroLogoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#ffe066"/>
-              <stop offset="100%" stop-color="#ffd700"/>
+            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#ffe066;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#e6b800;stop-opacity:1" />
             </linearGradient>
-            <filter id="heroGlow" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
-              <feMerge>
-                <feMergeNode in="blur"/>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+              <feMerge> 
+                <feMergeNode in="coloredBlur"/>
                 <feMergeNode in="SourceGraphic"/>
               </feMerge>
             </filter>
           </defs>
-          <text y="50" x="10" font-family="Cursive" font-size="40"
-                fill="url(#heroLogoGradient)" filter="url(#heroGlow)" font-weight="bold">
-            🌍 EB
-          </text>
+          <text x="10" y="40" font-family="Cursive" font-size="32" fill="url(#logoGradient)" filter="url(#glow)" fontweight="bold">AK</text>
         </svg>
       </div>
       <ul class="nav-menu">
@@ -58,10 +55,10 @@
   <section class="hero">
     <div class="hero-content">
       <div class="hero-logo">
-        <svg class="hero-logo-svg" width="200" height="120" xmlns="http://www.w3.org/2000/svg">
+        <svg class="hero-logo-svg" width="2000" height="120" xmlns="http://www.w3.org/2000/svg">
           <text y="90" x="10" font-family="Cursive" font-size="90"
                 fill="url(#heroLogoGradient)" filter="url(#heroGlow)" font-weight="bold">
-            🌍 EmptyBin
+            EmptyBin
           </text>
         </svg>
       </div>
