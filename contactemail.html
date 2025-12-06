@@ -2,400 +2,191 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Learn EmailJS Contact Form Step by Step</title>
+  <title>AK Educational Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    :root {
-      --gold-1: #fff4cc;
-      --gold-2: #ffe08a;
-      --gold-3: #ffd046;
-      --gold-4: #b8860b;
-      --text: #2b2b2b;
-      --accent: #1f4f8f;
-      --bg-grad-start: #FFD700;
-      --bg-grad-end: #FFA500;
-      --card-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    }
-
-    /* Page layout */
-    body {
-      margin: 0;
-      font-family: Inter, Segoe UI, Arial, sans-serif;
-      color: var(--text);
-      background: linear-gradient(135deg, var(--bg-grad-start), var(--bg-grad-end));
-      background-attachment: fixed;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 24px;
-    }
-
-    /* Header */
-    header {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(6px);
-      border-bottom: 2px solid var(--gold-3);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .header-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .brand {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-    }
-    .logo {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, var(--gold-1), var(--gold-2));
-      box-shadow: inset 0 0 6px rgba(255,255,255,0.8), 0 2px 8px rgba(0,0,0,0.2);
-      border: 2px solid var(--gold-3);
-    }
-    .brand h1 {
-      font-size: 18px;
-      margin: 0;
-      color: var(--gold-4);
-      letter-spacing: 0.4px;
-    }
-
-    /* Nav */
-    nav a {
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: 600;
-      margin-left: 16px;
-      padding: 8px 12px;
-      border-radius: 8px;
-      transition: background 0.25s ease;
-    }
-    nav a:hover {
-      background: rgba(31, 79, 143, 0.1);
-    }
-
-    /* Section cards */
-    section {
-      background: #fff8dc;
-      border: 1px solid var(--gold-3);
-      border-radius: 16px;
-      box-shadow: var(--card-shadow);
-      padding: 24px;
-      margin: 24px 0;
-    }
-    section h2 {
-      margin-top: 0;
-      color: var(--gold-4);
-      font-size: 22px;
-    }
-    section p {
-      line-height: 1.6;
-    }
-
-    /* Code blocks */
-    pre {
-      background: #2b2b2b;
-      color: #f7f7f7;
-      padding: 16px;
-      border-radius: 12px;
-      overflow: auto;
-      border: 1px solid #444;
-    }
-    code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 14px;
-    }
-
-    /* Lists with lead-in labels */
-    ul, ol {
-      padding-left: 20px;
-    }
-    li {
-      margin: 8px 0;
-    }
-    strong {
-      font-weight: 700;
-    }
-
-    /* Callouts */
-    .callout {
-      background: #fff;
-      border-left: 4px solid var(--gold-3);
-      padding: 12px 16px;
-      border-radius: 8px;
-      margin: 12px 0;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      color: #3b3b3b;
-      padding: 24px 0 48px 0;
-    }
-
-    /* Demo form box */
-    .demo {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-    .form-group {
-      display: grid;
-      gap: 6px;
-    }
-    label {
-      font-weight: 600;
-    }
-    input, textarea, button {
-      border-radius: 8px;
-      border: 1px solid #d5a73d;
-      padding: 10px 12px;
-      font-size: 14px;
-    }
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: var(--gold-4);
-      box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.15);
-    }
-    .btn {
-      background: var(--gold-3);
-      color: #2b2b2b;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform 0.08s ease, background 0.2s ease;
-    }
-    .btn:hover {
-      background: var(--gold-2);
-      transform: translateY(-1px);
-    }
-    .btn:active {
-      transform: translateY(0);
-    }
-
-    /* Responsive tweaks */
-    @media (max-width: 640px) {
-      .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-    }
-  </style>
+  <!-- Link your golden glassmorphism CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <h1>Build an EmailJS Contact Form</h1>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <!-- AK Brand Logo -->
+        <svg class="logo-svg" width="120" height="80" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="heroLogoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffe066"/>
+              <stop offset="100%" stop-color="#ffd700"/>
+            </linearGradient>
+            <filter id="heroGlow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <text y="70" x="10" font-family="Cursive" font-size="80"
+                fill="url(#heroLogoGradient)" filter="url(#heroGlow)" font-weight="bold">
+            AK
+          </text>
+        </svg>
       </div>
-      <nav>
-        <a href="#overview">Overview</a>
-        <a href="#prerequisites">Prerequisites</a>
-        <a href="#emailjs-setup">EmailJS setup</a>
-        <a href="#build-form">Build the form</a>
-        <a href="#connect-script">Connect the script</a>
-        <a href="#test-troubleshoot">Test and troubleshoot</a>
-      </nav>
+      <ul class="nav-menu">
+        <li><a href="#overview" class="nav-link">Overview</a></li>
+        <li><a href="#prerequisites" class="nav-link">Prerequisites</a></li>
+        <li><a href="#emailjs-setup" class="nav-link">Setup</a></li>
+        <li><a href="#build-form" class="nav-link">Build Form</a></li>
+        <li><a href="#connect-script" class="nav-link">Script</a></li>
+        <li><a href="#test-troubleshoot" class="nav-link">Test</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
     </div>
-  </header>
+  </nav>
 
-  <main class="container">
-    <section id="overview">
-      <h2>Overview</h2>
-      <p>This guided lesson shows you how to create a contact form and send submissions directly to your email using EmailJS, without a backend server. Follow the steps, copy the code, and use the live demo structure below to practice.</p>
-      <div class="callout">
-        <p><strong>Goal:</strong> A working contact form that sends name, email, and message via EmailJS using your public key, service ID, and template ID.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-logo">
+        <svg class="hero-logo-svg" width="200" height="120" xmlns="http://www.w3.org/2000/svg">
+          <text y="90" x="20" font-family="Cursive" font-size="100"
+                fill="url(#heroLogoGradient)" filter="url(#heroGlow)" font-weight="bold">
+            AK
+          </text>
+        </svg>
       </div>
-    </section>
-
-    <section id="prerequisites">
-      <h2>Prerequisites</h2>
-      <ul>
-        <li><strong>Account:</strong> Create a free account at EmailJS and log in.</li>
-        <li><strong>Service:</strong> Add a service (e.g., Gmail or a supported provider) in the Email Services section.</li>
-        <li><strong>Template:</strong> Create an email template and include variables matching your form fields, like <code>{{name}}</code>, <code>{{email}}</code>, and <code>{{message}}</code>.</li>
-        <li><strong>Public key:</strong> Find your public key (sometimes shown as user ID) in your EmailJS dashboard.</li>
-      </ul>
-      <div class="callout">
-        <p><strong>Tip:</strong> In your template’s content, reference variables exactly as your form’s input names. For example: “From: {{name}} &lt;{{email}}&gt;” and “Message: {{message}}”.</p>
+      <h1 class="hero-title">Learn EmailJS Contact Forms</h1>
+      <p class="hero-description">Step-by-step guidance to build modern forms with golden glassmorphism styling.</p>
+      <div class="hero-buttons">
+        <a href="#overview" class="btn btn-primary">Get Started</a>
+        <a href="#projects" class="btn btn-secondary">See Examples</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="emailjs-setup">
-      <h2>EmailJS setup</h2>
-      <ol>
-        <li><strong>Add EmailJS script:</strong> Include the EmailJS browser SDK before your own scripts.
-          <pre><code>&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"&gt;&lt;/script&gt;</code></pre>
-        </li>
-        <li><strong>Initialize:</strong> Call <code>emailjs.init('YOUR_PUBLIC_KEY')</code> once, preferably after the SDK loads.
-          <pre><code>&lt;script type="text/javascript"&gt;
-  emailjs.init('YOUR_PUBLIC_KEY');
+  <!-- Step-by-Step Instructional Sections -->
+  <section id="overview" class="container aims">
+    <h2 class="section-title">Overview</h2>
+    <div class="aims-grid">
+      <div class="aim-card"><h3>Goal</h3><p>Create a working EmailJS contact form styled with golden glassmorphism.</p></div>
+      <div class="aim-card"><h3>What you'll learn</h3><p>Setup, build, connect, and troubleshoot your form step by step.</p></div>
+    </div>
+  </section>
+
+  <section id="prerequisites" class="container aims">
+    <h2 class="section-title">Prerequisites</h2>
+    <div class="aims-grid">
+      <div class="aim-card"><h3>EmailJS Account</h3><p>Create and log in. Add a service (e.g., Gmail).</p></div>
+      <div class="aim-card"><h3>Template</h3><p>Include variables: {{name}}, {{email}}, {{message}}.</p></div>
+      <div class="aim-card"><h3>Public Key</h3><p>Copy your EmailJS public key from the dashboard.</p></div>
+    </div>
+  </section>
+
+  <section id="emailjs-setup" class="container aims">
+    <h2 class="section-title">EmailJS Setup</h2>
+    <div class="aims-grid">
+      <div class="aim-card"><h3>Add SDK</h3><p>Include the EmailJS browser SDK before your script.</p></div>
+      <div class="aim-card"><h3>Initialize</h3><p>Call emailjs.init('YOUR_PUBLIC_KEY').</p></div>
+      <div class="aim-card"><h3>IDs</h3><p>Note your service ID and template ID.</p></div>
+    </div>
+  </section>
+
+  <section id="build-form" class="container aims">
+    <h2 class="section-title">Build the Form</h2>
+    <div class="aims-grid">
+      <div class="aim-card"><h3>Structure</h3><p>Use id="form" and inputs named "name", "email", "message".</p></div>
+      <div class="aim-card"><h3>Accessibility</h3><p>Labels with for=, required fields, focus styles.</p></div>
+      <div class="aim-card"><h3>Button State</h3><p>Show sending/sent feedback and disable to prevent duplicates.</p></div>
+    </div>
+  </section>
+
+  <section id="connect-script" class="container aims">
+    <h2 class="section-title">Connect the Script</h2>
+    <pre><code>&lt;script&gt;
+const SERVICE_ID = 'default_service';
+const TEMPLATE_ID = 'template_qhe68wc';
+const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+
+emailjs.init(PUBLIC_KEY);
+
+const form = document.getElementById('form');
+const btn = document.getElementById('button');
+
+form.addEventListener('submit', (e) =&gt; {
+  e.preventDefault();
+  btn.disabled = true;
+  const original = btn.textContent;
+  btn.textContent = 'Sending...';
+
+  emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form)
+    .then(() =&gt; {
+      btn.textContent = 'Sent!';
+      setTimeout(() =&gt; { btn.textContent = original; btn.disabled = false; }, 1200);
+      form.reset();
+      alert('Message sent successfully!');
+    })
+    .catch((err) =&gt; {
+      console.error(err);
+      btn.textContent = original;
+      btn.disabled = false;
+      alert('Error sending message.');
+    });
+});
 &lt;/script&gt;</code></pre>
-        </li>
-        <li><strong>Identify IDs:</strong> Note your <strong>service ID</strong> (e.g., <code>default_service</code>) and <strong>template ID</strong> (e.g., <code>template_qhe68wc</code>).</li>
-      </ol>
-    </section>
+  </section>
 
-    <section id="build-form">
-      <h2>Build the form</h2>
-      <p>Create a semantic, accessible form with proper <code>id</code> and <code>name</code> attributes. The <code>name</code> attributes must match your EmailJS template variables.</p>
-      <pre><code>&lt;form id="contact-form" class="form"&gt;
-  &lt;div class="form-group"&gt;
-    &lt;label for="name"&gt;Name&lt;/label&gt;
-    &lt;input type="text" id="name" name="name" required /&gt;
-  &lt;/div&gt;
+  <section id="test-troubleshoot" class="container aims">
+    <h2 class="section-title">Test & Troubleshoot</h2>
+    <div class="aims-grid">
+      <div class="aim-card"><h3>Verify IDs</h3><p>Check service ID, template ID, and public key.</p></div>
+      <div class="aim-card"><h3>Match Fields</h3><p>Template variables must match input names.</p></div>
+      <div class="aim-card"><h3>Email Service</h3><p>Confirm emails aren’t blocked or flagged as spam.</p></div>
+      <div class="aim-card"><h3>Debug</h3><p>Use console.error for details. Add CAPTCHA for spam protection.</p></div>
+    </div>
+  </section>
 
-  &lt;div class="form-group"&gt;
-    &lt;label for="email"&gt;Email&lt;/label&gt;
-    &lt;input type="email" id="email" name="email" required /&gt;
-  &lt;/div&gt;
-
-  &lt;div class="form-group"&gt;
-    &lt;label for="message"&gt;Message&lt;/label&gt;
-    &lt;textarea id="message" name="message" rows="5" required&gt;&lt;/textarea&gt;
-  &lt;/div&gt;
-
-  &lt;button type="submit" id="send-button" class="btn"&gt;Send Message&lt;/button&gt;
-&lt;/form&gt;</code></pre>
-      <div class="callout">
-        <p><strong>Important:</strong> Ensure the form’s <code>id</code> and button’s <code>id</code> match the ones used in your JavaScript. Use clear, lowercase names.</p>
-      </div>
-    </section>
-
-    <section id="connect-script">
-      <h2>Connect the script</h2>
-      <p>Listen for form submission, prevent default behavior, show a sending state, and call <code>emailjs.sendForm</code> with your IDs.</p>
-      <pre><code>&lt;script&gt;
-  // Replace with your actual values
-  const SERVICE_ID = 'default_service';
-  const TEMPLATE_ID = 'template_qhe68wc';
-  const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
-
-  // Initialize EmailJS once
-  emailjs.init(PUBLIC_KEY);
-
-  const form = document.getElementById('contact-form');
-  const button = document.getElementById('send-button');
-
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Visual feedback
-    button.disabled = true;
-    const originalText = button.textContent;
-    button.textContent = 'Sending...';
-
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
-      .then(() =&gt; {
-        button.textContent = 'Sent!';
-        setTimeout(() =&gt; {
-          button.textContent = originalText;
-          button.disabled = false;
-        }, 1200);
-        form.reset();
-        alert('Message sent successfully!');
-      })
-      .catch((err) =&gt; {
-        button.textContent = originalText;
-        button.disabled = false;
-        console.error(err);
-        alert('There was an error sending your message. Please try again.');
-      });
-  });
-&lt;/script&gt;</code></pre>
-      <div class="callout">
-        <p><strong>Security note:</strong> The public key can be exposed client-side, but do not include private API keys. Consider rate limiting or CAPTCHA to reduce spam.</p>
-      </div>
-    </section>
-
-    <section id="test-troubleshoot">
-      <h2>Test and troubleshoot</h2>
-      <ul>
-        <li><strong>Verify IDs:</strong> Double-check your service ID, template ID, and public key. Typos are the most common issue.</li>
-        <li><strong>Match fields:</strong> Ensure template variables (e.g., <code>{{name}}</code>) exactly match form <code>name</code> attributes.</li>
-        <li><strong>Email service:</strong> Confirm the connected email service works and isn’t blocking messages or marking them as spam.</li>
-        <li><strong>Console logs:</strong> Use <code>console.error(err)</code> to see details if an error occurs.</li>
-        <li><strong>Feedback:</strong> Provide clear user feedback and disable the button during sending to prevent duplicates.</li>
-      </ul>
-      <div class="callout">
-        <p><strong>Enhancements:</strong> Add client-side validation, a success toast, or CAPTCHA (e.g., hCaptcha) to improve reliability and UX.</p>
-      </div>
-    </section>
-
-    <section id="demo">
-      <h2>Demo form (wired to your IDs)</h2>
-      <p>Paste your own values into the script and try sending a message. This form mirrors the setup taught above.</p>
-      <form id="form" class="demo">
-        <div class="form-group">
-          <label for="demo-name">Name</label>
-          <input type="text" id="demo-name" name="name" placeholder="Your name" required>
-        </div>
-        <div class="form-group">
-          <label for="demo-email">Email</label>
-          <input type="email" id="demo-email" name="email" placeholder="your@email.com" required>
-        </div>
-        <div class="form-group">
-          <label for="demo-message">Message</label>
-          <textarea id="demo-message" name="message" rows="5" placeholder="Write your message..." required></textarea>
-        </div>
-        <button type="submit" id="button" class="btn">Send Message</button>
+  <!-- Contact Section -->
+  <section id="contact" class="contact container">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact-content">
+      <form id="form" class="form">
+        <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" required></div>
+        <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+        <button type="submit" id="button" class="btn btn-primary">Send Message</button>
       </form>
+    </div>
+  </section>
 
-      <pre><code>&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript"&gt;
-  // TODO: replace with your actual values
-  const SERVICE_ID = 'default_service';
-  const TEMPLATE_ID = 'template_qhe68wc';
-  const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
-
-  emailjs.init(PUBLIC_KEY);
-
-  const demoForm = document.getElementById('form');
-  const demoButton = document.getElementById('button');
-
-  demoForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    demoButton.disabled = true;
-    const originalText = demoButton.textContent;
-    demoButton.textContent = 'Sending...';
-
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
-      .then(() =&gt; {
-        demoButton.textContent = 'Sent!';
-        setTimeout(() =&gt; {
-          demoButton.textContent = originalText;
-          demoButton.disabled = false;
-        }, 1200);
-        demoForm.reset();
-        alert('Message sent successfully!');
-      })
-      .catch((err) =&gt; {
-        console.error(err);
-        demoButton.textContent = originalText;
-        demoButton.disabled = false;
-        alert('There was an error sending your message.');
-      });
-&lt;/script&gt;</code></pre>
-    </section>
-  </main>
-
-  <footer>
-    <p>Made for learning: step-by-step, practical, and golden. Keep building.</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 AK Educational Website. All rights reserved.</p>
   </footer>
+  <!-- EmailJS Integration -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // Replace with your actual EmailJS public key
+    emailjs.init('YOUR_PUBLIC_KEY');
+
+    const form = document.getElementById('form');
+    const button = document.getElementById('button');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      button.textContent = 'Sending...';
+
+      emailjs.sendForm('default_service', 'template_qhe68wc', this)
+        .then(() => {
+          button.textContent = 'Send Message';
+          alert('Message Sent Successfully!');
+          form.reset();
+        }, (err) => {
+          button.textContent = 'Send Message';
+          alert(JSON.stringify(err));
+        });
+    });
+  </script>
 </body>
 </html>
